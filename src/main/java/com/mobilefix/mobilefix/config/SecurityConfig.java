@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Rutas públicas (sin autenticación)
                         .requestMatchers("/h2-console/**").permitAll()
-                        .requestMatchers("/login", "/css/**", "/js/**", "/images/**").permitAll()
+                        .requestMatchers("/login").permitAll()
 
                         // API REST - Endpoints protegidos por rol
                         // Orders
